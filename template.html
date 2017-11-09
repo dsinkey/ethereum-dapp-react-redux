@@ -1,0 +1,46 @@
+<div className="sidekick">
+  <h1>Transaction Object</h1>
+  <span className="label">From</span>
+  <span>
+    <select
+      id="send_from_account"
+      style={{ display: 'inline', width: '70%' }}
+    >
+      <option value="0xce6d0d2e0376e5ffa49f69fe5ddf1e1a561bde03">
+        0xce6d0d2e0376e...
+      </option>
+    </select>
+  </span>
+  <br />
+  <span className="label">To</span>
+  <input list="send_to_account" id="send_to_account_value" />
+  <datalist id="send_to_account">
+    <option value="0xce6d0d2e0376e5ffa49f69fe5ddf1e1a561bde03">
+      0xce6d0d2e0376e...
+    </option>
+  </datalist>
+  <br />
+  <span style={{ width: '30%' }}>Value (Ether)</span>{' '}
+  <input id="send_value_in_ether" type="text" value="0.01" />
+  <br />
+  <span style={{ width: '30%' }}>Gas</span>
+  <input id="send_gas" type="text" value="default" />
+  <br />
+  <span className="label">Gas Price (wei)</span>
+  <input id="send_gas_price" type="text" value="default" />
+  <br />
+  <span className="label">Data (ascii)</span>
+  <input id="send_data" type="text" value="default" />
+  <br />
+  <span className="label">Nonce</span>
+  <input id="send_nonce" type="text" value="default" />
+  <br />
+  <span>
+    <button onclick="generateTransactionJSON()">
+      JSON &gt;&gt;
+    </button>{' '}
+  </span>
+  <span>
+    <button onclick="resetTransactionObjectParameters()">Reset</button>
+  </span>
+</div>
